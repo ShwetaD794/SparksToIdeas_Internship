@@ -74,7 +74,7 @@ This project uses patient health metrics to predict the likelihood of diabetes. 
 
 ### 📌 Description
 
-This project classifies an email as *spam* or *not spam* using a trained *Random Forest Classifier* on preprocessed textual data. A *vectorizer* is used to convert text to numerical form and saved using joblib.
+This project classifies email messages as spam or not spam using *Natural Language Processing (NLP)* and a *Multinomial Naive Bayes classifier*. The text data is vectorized using CountVectorizer, and both the model and vectorizer are saved using joblib. The application is deployed in a *Tkinter GUI* for real-time classification.
 
 ### 🚀 How to Run
 
@@ -109,13 +109,6 @@ numpy
 joblib
 nltk
 tkinter (comes pre-installed with Python)
-
-
-> You can create a requirements.txt using:
-
-bash
-pip freeze > requirements.txt
-
 
 ---
 
