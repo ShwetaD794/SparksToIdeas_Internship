@@ -26,35 +26,35 @@ def exit_fullscreen(event):
 
 # Hover effect for button
 def on_enter(e):
-    predict_btn.config(bg="#7B68EE")
+    predict_btn.config(bg="#BDA0FF")
 
 def on_leave(e):
-    predict_btn.config(bg="#9370DB")
+    predict_btn.config(bg="#CBB4F2")
 
 # Root window
 root = tk.Tk()
 root.title("📨 Spam Detector")
-root.configure(bg="#D8BFD8")  # Soft lavender tone
+root.configure(bg="#F9F6FF")  # Very light pastel lavender (subtle tone)
 root.attributes('-fullscreen', True)
 root.bind("<Escape>", exit_fullscreen)
 
 # Center card container
-card = tk.Frame(root, bg="#FFFFFF", bd=0, padx=40, pady=40, relief="groove", highlightbackground="#DDA0DD", highlightthickness=2)
+card = tk.Frame(root, bg="#FFFFFF", bd=0, padx=40, pady=40, relief="groove", highlightbackground="#EADCF8", highlightthickness=2)
 card.place(relx=0.5, rely=0.5, anchor="center")
 
 # Title
-title = tk.Label(card, text="📩 Spam Message Detector", font=("Segoe UI", 26, "bold"), bg="#FFFFFF", fg="#4B0082")
+title = tk.Label(card, text="📩 Spam Message Detector", font=("Segoe UI", 26, "bold"), bg="#FFFFFF", fg="#5A3F9E")
 title.pack(pady=(0, 30))
 
 # Message entry box
-entry = tk.Text(card, height=8, width=80, font=("Segoe UI", 14), bg="#F0F0F5", fg="#333", bd=0, relief="flat",
-                highlightthickness=2, highlightbackground="#BA55D3", wrap=tk.WORD)
+entry = tk.Text(card, height=8, width=80, font=("Segoe UI", 14), bg="#FBFAFF", fg="#333", bd=0, relief="flat",
+                highlightthickness=2, highlightbackground="#D5C8F3", wrap=tk.WORD)
 entry.pack(pady=10)
 
 # Predict Button
 predict_btn = tk.Button(card, text="🔍 Check Spam", command=predict,
-                        font=("Segoe UI", 14, "bold"), bg="#9370DB", fg="white",
-                        activebackground="#7B68EE", activeforeground="white",
+                        font=("Segoe UI", 14, "bold"), bg="#CBB4F2", fg="white",
+                        activebackground="#BDA0FF", activeforeground="white",
                         relief="flat", padx=30, pady=12, cursor="hand2")
 predict_btn.pack(pady=20)
 
